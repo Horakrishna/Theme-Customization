@@ -298,7 +298,35 @@ input:-webkit-autofill:focus {
 
 
 /* ================ Navigation ================== */
+.nav.navbar-nav ul.sub-menu {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
 
+.nav.navbar-nav ul.sub-menu li a {
+    display: block;
+    color: #333;
+    padding: 5px 13px;
+}
+
+.nav.navbar-nav ul.sub-menu li {
+    border: 1px solid #ddd;
+}
+.nav.navbar-nav li:hover ul.sub-menu {
+    opacity: 1;
+    visibility: visible;
+	z-index: 999;
+	color: #0078B4;
+}
 nav.navbar.bootsnav ul.nav > li > a {
 	color: #3f4b5a;
 	font-family: 'Titillium Web', sans-serif;
