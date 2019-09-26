@@ -130,6 +130,7 @@ function neuron_widgets_init(){
 		'before_title'=>'<h3 class="widget-title">',
 		'after_title' =>'</h3>',
 	));
+	
 	register_sidebar( array(
 		'name'       =>esc_html('Footer three','neuron'),
 		'id'         =>'footer-3',
