@@ -2,7 +2,7 @@
  * @output wp-admin/js/theme.js
  */
 
-/* global _wpThemeSettings, confirm, tb_position */
+/* global _mealSettings, confirm, tb_position */
 window.wp = window.wp || {};
 
 ( function($) {
@@ -13,7 +13,7 @@ themes = wp.themes = wp.themes || {};
 
 // Store the theme data and settings for organized and quick access
 // themes.data.settings, themes.data.themes, themes.data.l10n
-themes.data = _wpThemeSettings;
+themes.data = _mealSettings;
 l10n = themes.data.l10n;
 
 // Shortcut for isInstall check
@@ -2034,7 +2034,7 @@ $( document ).ready(function() {
 	});
 
 	$( '.broken-themes .delete-theme' ).on( 'click', function() {
-		return confirm( _wpThemeSettings.settings.confirmDelete );
+		return confirm( _mealSettings.settings.confirmDelete );
 	});
 });
 

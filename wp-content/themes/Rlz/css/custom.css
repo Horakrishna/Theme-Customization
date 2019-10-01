@@ -1,0 +1,151 @@
+input.error {
+background: url(../images/error-input.png) no-repeat right center #ffffff !important;
+border: 1px solid #ff0000 !important;
+}
+input.valid {
+background: url(../images/tick-input.png) no-repeat right center #ffffff !important;
+border: 1px solid #93DC69 !important;
+}
+select.error {
+background: url(../images/error-input.png) no-repeat right center #ffffff !important;
+border: 1px solid #ff0000 !important;
+}
+select.valid {
+border: 1px solid #93DC69 !important;
+}
+select.error {
+border: 1px solid #ff0000;
+}
+#LoadingDiv{
+  margin:0px 0px 0px 0px;
+  position:fixed;
+  height: 100%;
+  z-index:9999;
+  padding-top:350px;
+  width:100%;
+  clear:none;
+  background:url(../images/trans.png);
+  text-align:center;
+  color:#FFF;
+  font-weight:normal;
+  font-size:16px;
+  font-family:Trebuchet MS, Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  }
+/*IE will need an 'adjustment'*/
+* html #LoadingDiv{
+     position: absolute;
+     height: expression(document.body.scrollHeight &gt; document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+  }
+img.displayed {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+#popup2_overlay {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+opacity:0.85;
+z-index: 9999;
+}
+#popup2 {
+	position: fixed;
+  left: 41%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -205px;
+  z-index: 9999;
+}
+
+div#securecontain {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 11;
+}
+.inner-wrap {
+  width: 1020px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerlink{
+  cursor: pointer;
+}
+#rd5{
+  color: #000;
+  text-decoration: underline;
+}
+.termsnew {
+    font-weight: normal;
+    font-style: oblique;
+    color: #808080;
+    letter-spacing: 1pt;
+    word-spacing: 1pt;
+    font-size: 10px;
+    text-align: left;
+    font-family: helvetica, sans-serif;
+    line-height: 11px;
+    margin-top: -34px;
+    padding: 0px 11px 0 4px;
+}
+/*
+==============================================
+pulse
+==============================================
+*/
+
+.pulse{
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.7;		
+	}
+	50% {
+		transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(0.9);
+		opacity: 0.7;	
+	}			
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;		
+	}
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;	
+	}			
+}
+
+
+
+/*
+==============================================
+pulseb
+==============================================
+*/

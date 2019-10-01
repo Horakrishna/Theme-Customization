@@ -130,7 +130,7 @@ function neuron_widgets_init(){
 		'before_title'=>'<h3 class="widget-title">',
 		'after_title' =>'</h3>',
 	));
-	
+
 	register_sidebar( array(
 		'name'       =>esc_html('Footer three','neuron'),
 		'id'         =>'footer-3',
@@ -146,7 +146,7 @@ add_action('widgets_init','neuron_widgets_init');
 //ShortCode Register
 
 function thumbpost_list_shortcode($atts){
-	extract( shortcode_atts(array(
+	extract( shortcode_atts( array(
 		'count' => 3,
 	),$atts));
 	
@@ -156,18 +156,19 @@ function thumbpost_list_shortcode($atts){
 			'post_type'     =>'post'
 		)
 	);
+	
 	$list ='<ul>';
 	while($q->have_posts()) : $q->the_post();
 	$id =get_the_ID();
 
-	$list.= '
-		<li>
-			'.get_the_post_thumbnail($id, 'thumbnail').'
-		    <p><a href="'.get_permalink().'">'.get_the_title().'</a></p>
-			<span>'.get_the_date('D F Y',$id).'</span>
-			
-		</li> 
-	';
+		$list.= '
+			<li>
+				'.get_the_post_thumbnail($id, 'thumbnail').'
+			    <p><a href="'.get_permalink().'">'.get_the_title().'</a></p>
+				<span>'.get_the_date('D F Y',$id).'</span>
+				
+			</li> 
+		';
 
 	endwhile;
 	$list ='</ul>';
