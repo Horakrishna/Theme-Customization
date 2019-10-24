@@ -140,6 +140,15 @@ function neuron_widgets_init(){
 		'before_title'=>'<h3 class="widget-title">',
 		'after_title' =>'</h3>',
 	));
+	register_sidebar( array(
+		'name'       =>esc_html('Footer Four','neuron'),
+		'id'         =>'footer-4',
+		'description'=>esc_html__('Add Footer four widgets here','neuron'),
+		'before_widget'=>'<div id="%1$s"  class="footer-widgets %2$s">',
+		'after_widget' =>'</div>',
+		'before_title'=>'<h3 class="widget-title">',
+		'after_title' =>'</h3>',
+	));
 }
 add_action('widgets_init','neuron_widgets_init');
 
@@ -165,13 +174,13 @@ function thumbpost_list_shortcode($atts){
 			<li>
 				'.get_the_post_thumbnail($id, 'thumbnail').'
 			    <p><a href="'.get_permalink().'">'.get_the_title().'</a></p>
-				<span>'.get_the_date('D F Y',$id).'</span>
+				<span>'.get_the_date('d F Y',$id).'</span>
 				
 			</li> 
 		';
 
 	endwhile;
-	$list ='</ul>';
+	$list.='</ul>';
 	wp_reset_query();
 	return $list;
 }

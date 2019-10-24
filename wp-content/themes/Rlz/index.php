@@ -1,29 +1,13 @@
-<?php
 
-  if (isset($_GET['submit'])) {
-    $to ='pallabcse14@gmail.com';
-    $sub =$_GET['subject'];
-    $msg =$_GET['message']."\r\n";
-    $msg =$_GET['name']."\r\n";
-    $msg =$_GET['email'];
-    $sender ='Form:'.$_GET['email'];
-    $result = mail($to, $sub, $msg,$sender);
-
-    if ($result == true) {
-      echo 'parsi';
-    }
-  }
-  print_r($_GET);
-?>
 
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
  <meta charset="utf-8"/>
 
-<title>RLZ</title>
+<title></title>
 
-<meta name="description" content="RLZ" />
+<meta name="description" content="" />
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -227,7 +211,8 @@ harmful side effects.</p>
    <!-- <img src="/xone/us/v2/https://www.maleperformance-news.com/rln/v1/network/images/arrow.png" width="534" height="106" alt="" class="s1-arrow" /> -->
    <i class="sprite sprite-arrow s1-arrow"></i>
    <!-- <img src="/xone/us/v2/https://www.maleperformance-news.com/rln/v1/network/images/product.png" width="288" height="343" alt="" class="s1-prod1" /> -->
-   <img src="<?php echo get_template_directory_uri();?>/images/product.png" width="320" height="412" alt="" class="s1-prod2" style="left:-81px;"/>
+   <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png"  alt="" class="s1-prod1"/>
+    <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png"  alt="" class="s1-prod2" style="left:-81px;"/>
    <img src="<?php echo get_template_directory_uri();?>/images/us-seal.png" width="173" height="173" alt="" class="s1seal" />
    <ul class="s1list">
      <li><span>Bigger & Long-Lasting Erections </span>
@@ -371,9 +356,10 @@ harmful side effects.</p>
 <div class="spacer clear"></div>
 <div class="clear"></div>
 <!-- <input type="submit" value="submit"> -->
+
 <div class="frm-btm">
   <img src="<?php echo get_template_directory_uri();?>/images/lock.png" width="199" height="10" alt="" class="lock" />
-  <input type="submit" src="<?php echo get_template_directory_uri();?>/images/submit-btn.png" alt="" value="submit" class="submit pulse" />
+  <input type="image" src="<?php echo get_template_directory_uri();?>/images/submit-btn.png" alt="" class="submit pulse" />
   <img src="<?php echo get_template_directory_uri();?>/images/frm-btm.png" width="164" height="39" alt="" class="security" />
 </div>
 <div class="clear"></div>
@@ -432,8 +418,8 @@ harmful side effects.</p>
 <div id="section3">
   <div class="sec3inner">
     <div class="contentWrap" style="position:relative;">
-     <img src="<?php echo get_template_directory_uri();?>/images/product.png" width="313" height="374" alt="" class="s3-prod1" />
-     <img src="<?php echo get_template_directory_uri();?>/images/product.png" width="375" height="449" alt="" class="s3-prod2" />
+     <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png" width="313" height="374" alt="" class="s3-prod1" />
+     <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png" width="375" height="449" alt="" class="s3-prod2" />
      <img src="<?php echo get_template_directory_uri();?>/images/us-seal.png" width="120" height="120" alt="" class="satisfaction-seal" />
      <!--  <i class="sprite2 sprite-us-seal satisfaction-seal"  width="120" height="120" alt="" ></i> -->
      <p class="s3hding"><span>Introducing RLZ</span>
@@ -541,9 +527,9 @@ harmful side effects.</p>
     <p class="bnft-txt2">Increase in penile chamber capacity and regular boost in blood flow may help add those inches to your penis size, both length & girth wise.</p>
   </div>
 </div>
-<img src="<?php echo get_template_directory_uri();?>/images/product.png" width="268" height="320" alt="" class="s5-prod1" />
-<img src="<?php echo get_template_directory_uri();?>/images/product.png" width="268" height="320" alt="" class="s5-prod2" />
-<img src="<?php echo get_template_directory_uri();?>/images/product.png" width="321" height="385" alt="" class="s5-prod3" />
+<img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png"  width="268" height="320" alt="" class="s5-prod1" />
+<img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png" width="268" height="320" alt="" class="s5-prod2" />
+<img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png"  height="385" class="s5-prod3" />
 <img src="<?php echo get_template_directory_uri();?>/images/satisfaction-seal.png" width="127" height="108" alt="" class="s5img" />
 <!-- <i class="sprite2 sprite-satisfaction-seal s5img" width="127" height="108" alt="" ></i> -->
 <!--  <img src="/xone/us/v2/https://www.maleperformance-news.com/rln/v1/network/images/s5img.png" width="79" height="118" alt="" class="s5img2" /> -->
@@ -688,9 +674,9 @@ harmful side effects.</p>
          </p>
 
          <i class="sprite2 sprite-us-seal s8seal2"  width="173" height="173" alt="" ></i>
-         <img src="<?php echo get_template_directory_uri();?>/images/product.png" width="286" height="341" alt="" class="s8-prod1" />
-         <img src="<?php echo get_template_directory_uri();?>/images/product.png" width="286" height="341" alt="" class="s8-prod2" />
-         <img src="<?php echo get_template_directory_uri();?>/images/product.png" width="411" height="493" alt="" class="s8-prod3" />
+         <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png" width="286" height="341" alt="" class="s8-prod1" />
+         <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png" width="286" height="341" alt="" class="s8-prod2" />
+         <img src="<?php echo get_template_directory_uri();?>/images/MALE PERFORMANCE XL Bottle.png" width="411" height="493" alt="" class="s8-prod3" />
          <ul class="s8list">
            <li><span>Bigger & Long-Lasting Erections </span>
             <br />Maximum pleasure & intensified orgasms

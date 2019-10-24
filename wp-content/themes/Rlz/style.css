@@ -12,3 +12,63 @@ License URI: LICENSE
 Text Domain: Rlz
 
 */
+
+img.s1-prod1 {
+    height: 320px;
+    width: 240px;
+    margin-top: 40px;
+    left: -80px;
+}
+
+img.s1-prod2 {
+    height: 393px;
+    width: 230px;
+    margin-left: 66px;
+}
+.s3-prod1 {
+    right: 83px;
+    top: 447px;
+    height: 358px;
+    width: 221px;
+}
+.s3-prod2 {
+    right: -89px;
+    top: 400px;
+    height: 444px;
+    width: 250px;
+}
+
+.s5-prod1, .s5-prod2, .s5-prod3, .s5img2 {
+    left: 305px;
+    position: absolute;
+    top: 620px;
+    height: 301px;
+}
+.s5-prod2{top: 620px;left: 502px;width: 203px;}
+.s5-prod3{top:554px;left: 402px;height: 385px;}
+.s5img{top:804px;left:-29px;}
+.s5img2{top:814px;left:686px;}
+
+
+.s8-logo, .s8-prod1, .s8-prod2, .s8-prod3 {
+    left: 33px;
+    position: absolute;
+    top: 11px;
+}
+img.s8-prod1 {
+    left: 460px;
+    top: 310px;
+    height: 350px;
+}
+img.s8-prod2 {
+    left: 641px;
+    top: 316px;
+    height: 341px;
+    width: 286px;
+}
+img.s8-prod3 {
+    left: 546px;
+    top: 237px;
+    height: 438px;
+    width: 263px;
+}
