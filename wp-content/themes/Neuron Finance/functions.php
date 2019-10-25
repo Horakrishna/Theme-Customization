@@ -107,6 +107,18 @@ function neuron_theme_custom_post(){
 			'show_ui'  =>true
 		)
 	);
+
+	register_post_type('portfolio',
+		array(
+			'labels'=> array(
+				'name' =>__('Portfolio'),
+				'singular_name'=>__("portfolio")
+			),
+			'supports' => array('title','editor','custom-fields','thumbnail','page-attributes'),
+			'public'   =>__return_false(),
+			'show_ui'  =>true
+		)
+	);
 }
 add_action('init','neuron_theme_custom_post');
 

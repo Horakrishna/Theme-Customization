@@ -1,4 +1,9 @@
+<?php
+/*
+Template Name:Service Template
+*/
 
+?>
 <?php get_header();?>
 <?php
     while(have_posts()):
@@ -20,17 +25,20 @@
 				</div>
 			</div>
 		</section><!-- end breadcrumb -->
-	
-		<!-- ::::::::::::::::::::: Block Section:::::::::::::::::::::::::: -->
-		<section class="block  section-padding">
+        <?php get_template_part('content/service');?>
+
+        	<!-- ::::::::::::::::::::: Block Content :::::::::::::::::::::::::: -->
+		<section class="block block2">
 			<div class="container">
 				<div class="row">
+					<!-- block image -->
 					<div class="col-md-12">
-						<!-- block text -->
 						<?php the_content();?>
-					</div>	
+					</div>
+					
 				</div>
 			</div>
-        </section><!-- block area end -->
+		</section><!-- block area end -->
+
     <?php endwhile;?>
 <?php get_footer();?>

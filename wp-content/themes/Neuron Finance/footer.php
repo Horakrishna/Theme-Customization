@@ -1,5 +1,5 @@
 
-
+		<?php if(!is_page(array(13,29))):?>
 		<!-- :::::::::::::::::::::  Client Section:::::::::::::::::::::::::: -->
 		<section class="client-logo">
 			<div class="container">
@@ -16,7 +16,7 @@
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</section><!-- end client section -->
-		
+       <?php endif;?>
 	
 		<!-- ::::::::::::::::::::: Footer Section:::::::::::::::::::::::::: -->
 		<footer>
