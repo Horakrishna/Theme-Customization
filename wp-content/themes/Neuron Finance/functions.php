@@ -80,7 +80,9 @@ function neuron_theme_custom_post(){
 				'name' =>__('Slide'),
 				'singular_name'=>__("Slide")
 			),
-			'supports' => array('title','editor','custom-fields','thumbnail','page-attributes'),
+			'supports' => array(
+				'title','editor','thumbnail','revisions','custom-fields','page-attributes'
+			),
 			'public'   =>__return_false(),
 			'show_ui'  =>true
 		)
@@ -89,10 +91,14 @@ function neuron_theme_custom_post(){
 		array(
 			'labels'=> array(
 				'name' =>__('Features'),
-				'singular_name'=>__("Feature")
+				'singular_name'=>__("Feature"),
+				'all_items'  =>'Feature all item',
+				'add_new'    =>'Add new feature',
+				'add_new_item'=>'Add new feature item'
+
 			),
-			'supports' => array('title','editor','thumbnail','page-attributes'),
-			'public'   =>__return_false(),
+			'supports' => array('title', 'editor', 'revisions', 'thumbnail', 'custom-fields', ),
+			'public'   =>true,
 			'show_ui'  =>true
 		)
 	);
@@ -102,20 +108,23 @@ function neuron_theme_custom_post(){
 				'name' =>__('Services'),
 				'singular_name'=>__("Service")
 			),
-			'supports' => array('title','editor','custom-fields','thumbnail','page-attributes'),
+			'supports' => array('title','editor','thumbnail','revisions','custom-fields','page-attributes'),
 			'public'   =>__return_false(),
 			'show_ui'  =>true
 		)
 	);
 
-	register_post_type('portfolio',
+	register_post_type('work',
 		array(
 			'labels'=> array(
-				'name' =>__('Portfolio'),
-				'singular_name'=>__("portfolio")
+				'name' =>__('work'),
+				'singular_name'=>__("work"),
+				'all_items'  =>'work all item',
+				'add_new'    =>'Add new work',
+				'add_new_item'=>'Add new work item'
 			),
-			'supports' => array('title','editor','custom-fields','thumbnail','page-attributes'),
-			'public'   =>__return_false(),
+			'supports' => array('title','editor','thumbnail','revisions','page-attributes'),
+			'public'   =>true,
 			'show_ui'  =>true
 		)
 	);
@@ -197,3 +206,8 @@ function thumbpost_list_shortcode($atts){
 	return $list;
 }
 add_shortcode('thumb_posts','thumbpost_list_shortcode');
+
+/**
+ * Custom Comment Walker template.
+ */
+include_once('inc/cs-framework/cs-framework.php');

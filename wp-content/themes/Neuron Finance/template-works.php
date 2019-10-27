@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name:Portfolio Template
+    Template Name:Works Template
 */
 ?>
 
@@ -44,7 +44,7 @@
 
 					$args =array(
 						'posts_per_page' => 6,
-						'post_type'     =>'portfolio',
+						'post_type'     =>'work',
 						'order_by'      =>'menu_order',
 						'order'         =>'ASC'
 					);

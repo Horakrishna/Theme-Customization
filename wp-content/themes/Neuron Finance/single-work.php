@@ -1,8 +1,40 @@
 
 <?php get_header();?>
 <?php
-    while(have_posts()):
-        the_post();
+	while(have_posts() ): the_post();
+	
+	
+	if(get_post_meta(get_the_ID(),'neuron_work_meta' , true)){
+		$work_meta =get_post_meta(get_the_ID(),'neuron_work_meta' , true);
+	}else{
+		$work_meta =array();
+	}
+
+	if(array_key_exists('sub_title', $work_meta)){
+		$sub_title = $work_meta['sub_title'];
+	}else{
+		$sub_title ='';
+	}
+	if(array_key_exists('big_preview',$work_meta)){
+		$big_preview =$work_meta['big_preview'];
+	}else{
+		$big_preview ='';
+	}
+	if(array_key_exists('link_text',$work_meta)){
+		$link_text =$work_meta['link_text'];
+	}else{
+		$link_text ='Visit Website';
+	}
+	if(array_key_exists('link',$work_meta)){
+		$link =$work_meta['link'];
+	}else{
+		$link ='';
+	}
+	if(array_key_exists('informations',$work_meta)){
+		$informations =$work_meta['informations'];
+	}else{
+		$informations ='';
+	}
 
 ?>
 
@@ -19,18 +51,52 @@
 					</div>
 				</div>
 			</div>
-		</section><!-- end breadcrumb -->
-	
-		<!-- ::::::::::::::::::::: Block Section:::::::::::::::::::::::::: -->
-		<section class="block  section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<!-- block text -->
-						<?php the_content();?>
-					</div>	
+		</section>
+		<!-- end breadcrumb -->
+	<pre><?php //echo var_dump($work_meta);?></pre>
+
+	<section class="single-portfolio-wrapper section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<!-- single portfolio images -->
+					<div class="single-portfolio-images">
+					<?php 
+						$big_portfio_img = wp_get_attachment_image_src($big_preview,'large');
+					?>
+					<?php if(!empty($big_preview)):?>
+						<img class="img-responsive" src="<?php echo $big_portfio_img['0'];?>" alt="">
+                       <?php else:?>
+					   <?php the_post_thumbnail('large');
+					 		endif;  
+					   ?>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<!-- single portfolio info -->
+					<div class="single-portfolio-inner">
+						<header class="single-portfolio-title">
+							<?php echo $sub_title;?>
+						</header>
+						<div class="portfolio-details-panel">
+							<?php the_content();?>
+							<ul class="portfolio-meta">
+							<?php if(!empty($informations)) :foreach($informations as $information) :?>
+
+								<li><span> <?php echo $information['title'];?> </span> <?php echo $information['value'];?> </li>
+                            <?php endforeach; endif; ?>
+								<li><span> Share </span> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+						<?php 
+							if(!empty($link)): ?>
+						<a class="btn btn-primary" href="<?php echo $link;?>"><?php echo $link_text;?> </a>
+                    <?php endif;?>
+					</div>
 				</div>
 			</div>
-        </section><!-- block area end -->
-    <?php endwhile;?>
+		</div>
+	</section>
+<?php endwhile;?>
+
 <?php get_footer();?>
