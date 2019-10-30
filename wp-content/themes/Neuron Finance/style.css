@@ -135,8 +135,33 @@ h6{
 	font-size: 16px;
 	line-height: 20px;
 }
+.comment-area input[type="text"],input[type="email"],input[type="url"], textarea {
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    padding: 10px;
+}
+.comment-notes {
+    display: none;
+}
+p.form-submit {
+    float: right;
+}
 
-.btn {
+p.form-submit input {
+    margin-top: 20px;
+}
+.comment-form-cookies-consent {
+    display: none;
+}
+p.comment-form-author,p.comment-form-email,p.comment-form-url {
+    float: left;
+    width: 32%;
+    margin-left: 7px;
+}
+p.comment-form-comment label, p.comment-form-author label,p.comment-form-email label,p.comment-form-url label{
+	display: none;
+}
+.btn,input[type=submit] {
 	color: #fff;
 	padding: 14px 30px;
 	text-transform: uppercase;
@@ -148,7 +173,7 @@ h6{
 .btn:hover {
     box-shadow: 0 8px 10px rgba(34, 34, 34, 0.2);
 }
-.btn-primary {
+.btn-primary,input[type=submit] {
 	background-color: #3452ff;
 }
 .btn-primary,
@@ -1366,7 +1391,7 @@ li.rating ul i {
 
 .comments-responsed-wrapper {
 	border-top: 1px solid #ddd;
-	margin-top: 50px;
+	margin-top: 180px;
 	padding: 20px 40px;
 }
 .comments-media ol {
@@ -1405,7 +1430,7 @@ li.rating ul i {
 	font-size: 13px;
 	margin-left: 20px;
 }
-.comment-content a.btn-comment-replay {
+.reply a {
     border: 1px solid #aaa;
     border-radius: 3px;
     color: #aaa;
@@ -1419,10 +1444,70 @@ li.rating ul i {
     -moz-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
-.comment-content a.btn-comment-replay:hover {
+.reply a:hover {
 	background: #011a48 none repeat scroll 0 0;
 	border-color: #011a48;
 	color: #fff;
+}
+.commentlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.commentlist .says {
+    display: none;
+}
+
+.comment-author {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 10px;
+    color: #333;
+}
+
+.comment-author a {
+    color: #333;
+}
+
+.comment-body {
+    position: relative;
+    padding-left: 120px;
+}
+
+
+.comment-body img.avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+
+.comment-metadata {
+    display: inline-block;
+}
+
+.comment-metadata a {
+    color: #333;
+}
+
+.commentlist li {
+    margin-bottom: 20px;
+}
+
+ol.commentlist {margin-bottom: 1px;}
+
+.children {
+    padding-left: 30px;
+    margin: 0;
+    list-style: none;
+}
+
+.children li {
+    margin-top: 25px;
 }
 .comments-media li .comment-inner {
 	border-bottom: 1px solid #ddd;

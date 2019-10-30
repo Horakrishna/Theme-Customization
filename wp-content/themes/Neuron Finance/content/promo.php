@@ -1,12 +1,16 @@
-<!-- ::::::::::::::::::::: start intro section:::::::::::::::::::::::::: -->
+<?php
+	$promo_title =cs_get_option('promo_title');
+	$promo_content =cs_get_option('promo_content');
+?>
+
 <section class="section-padding darker-bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
 						<div class="intro-title text-center">
-							<h2>Welcome to the Neuron Finance</h2>
+							<h2><?php echo $promo_title;?></h2>
 							<div class="hidden-xs">
-								<p>Interactively simplify 24/7 markets through 24/7 best practices. Authoritatively foster cutting-edge manufactured products and distinctive.</p>
+								<p><?php echo $promo_content;?></p>
 							</div>
 						</div>
 					</div>

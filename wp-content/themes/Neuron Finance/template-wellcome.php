@@ -2,10 +2,20 @@
 /*
  Template Name:Wellcome Template
 */
-
-?>
-
-<?php get_header();?>
+$enable_home_title    = cs_get_option('enable_home_title');
+$enable_promo_title   = cs_get_option('enable_promo_title');
+$home_title           = cs_get_option('home_title');
+$home_content         = cs_get_option('home_content');
+$home_image           = cs_get_option('home_image');
+$home_image_array     = wp_get_attachment_image_src(cs_get_option('home_image'),'large');
+get_header();
+ 
+if(!empty($home_image)){
+	$home_image =$home_image_array['0'];
+}else{
+	$home_image =''.get_template_directory_uri().'/assets/img/homepageblock.jpg';
+}
+ ?>
 
 		<!-- ::::::::::::::::::::: start slider section:::::::::::::::::::::::::: -->
 		<section class="slider-area">
@@ -46,30 +56,29 @@
 		</section><!-- slider area end -->
 	
 	
-		<?php get_template_part('content/promo');?>
+		<?php if($enable_promo_title == true) { get_template_part('content/promo'); } ?>
 	
 	
 		<!-- ::::::::::::::::::::: start block content area:::::::::::::::::::::::::: -->
+		<?php if($enable_home_title ==true) :?>
 		<section class="section-padding">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="block-text">
-							<h2>A Finance Agency Crafting Beautiful & Engaging Online Experiences</h2>
-							<p>Seamlessly communicate distinctive alignments and business models. Efficiently whiteboard robust meta-services whereas stand-alone synergy. Enthusiastically engage premier supply chains after intuitive testing procedures. Conveniently parallel task robust imperatives through corporate customer service.</p> 
-							
-							<p>Dynamically productivate tactical mindshare via business collaboration and idea-sharing. Credibly conceptualize extensive schemas for functionalized metrics. </p>
+							<h2><?php echo $home_title?></h2>
+							<?php echo wpautop($home_content);?>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="block-img">
-							<img src="<?php echo get_template_directory_uri();?>/assets/img/homepageblock.jpg" alt="" />
+							<img src="<?php echo $home_image;?>" alt="" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</section><!-- block area end -->
-	
+			<?php endif;?>
 	
 		<?php get_template_part('content/service')?>
 	<?php get_footer();?>

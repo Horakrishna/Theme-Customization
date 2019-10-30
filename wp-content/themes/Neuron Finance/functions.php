@@ -35,8 +35,8 @@ function neuron_theme_supports(){
     add_theme_support( 'title-tag' );
     //Enable support for Post Thumbnails on posts and pages.
     add_theme_support( 'post-thumbnails' );
-
-    	// This theme uses wp_nav_menu() in two locations.
+	add_image_size('neuron-blog-thum',740,520, true);
+    // This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(
 			array(
 				'menu-1' => __( 'Primary', 'neuron' ),
@@ -211,3 +211,32 @@ add_shortcode('thumb_posts','thumbpost_list_shortcode');
  * Custom Comment Walker template.
  */
 include_once('inc/cs-framework/cs-framework.php');
+
+
+if ( ! function_exists( 'neuron_entry_footer' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function neuron_entry_footer() {
+
+		// Hide author, post date, category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+
+
+			/* translators: used between list items, there is a space after the comma. */
+			$categories_list = get_the_category_list( __( ', ', 'neuron' ) );
+			if ( $categories_list ) {
+				printf(
+					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of categories. */
+					'<span class="cat-links">%1$s</span>',
+					get_the_category_list(''),
+					
+					$categories_list
+				); 
+			}
+
+			
+		}
+		
+	}
+endif;

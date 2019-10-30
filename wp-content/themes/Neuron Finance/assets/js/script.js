@@ -24,7 +24,10 @@
 	// ============================================
     jQuery(document).ready(function ($) {
         
-		
+	$(".comment-form-comment textarea").attr("placeholder","Type your message");
+	$(".comment-form-author input").attr("placeholder","Your Name");
+	$(".comment-form-email input").attr("placeholder","Your Email");
+	$(".comment-form-url input").attr("placeholder","Website");
 		// owl carouse
 			$('.all-client-logo').owlCarousel({
 				items:5,
